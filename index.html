@@ -48,18 +48,30 @@
 				<nav>
 					<ul class="nav">
 						<li class="tab-btn active"><a href="#" class=""><i class="lnr lnr-home"></i> <span>Home</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa fa-list-alt"></i> <span>MAGE</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-th-list"></i> <span>TAIFUHARI</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-columns"></i> <span>TSUMAKABE LOAD</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-chevron-circle-up"></i> <span>DEAD LOAD</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-chevron-up"></i> <span>ROOF</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-home"></i> <span>OOYANE</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-window-minimize"></i> <span>HUICHI</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-tasks"></i> <span>KISO WEIGHT</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-bar-chart"></i> <span>DATA-2</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-area-chart"></i> <span>DATA</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa fa-university"></i> <span>KIZ-SUB</span></a></li>
-						<li class="tab-btn"><a href="#" class=""><i class="fa fa-calculator"></i> <span>COMPUTATION</span></a></li>
+						<li>
+							<a href="#Tsumakabe" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>TSUMAKABE LOAD</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="Tsumakabe" class="collapse ">
+								<ul class="nav">
+									<li class="tab-btn"><a class="" href="#">TSUMAKABE</a></li>
+                                    <li class="tab-btn"><a class="" href="#">FLOOR AREA</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="tab-btn"><a href="#" class=""><i class="fa fa-columns"></i> <span>DEAD LOAD</span></a></li>
+						<li class="tab-btn"><a href="#" class=""><i class="fa fa-chevron-circle-up"></i> <span>NOTES AND LEGEND</span></a></li>
+						<li>
+							<a href="#Lineload" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>LINE LOAD</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="Lineload" class="collapse ">
+								<ul class="nav">
+									<li class="tab-btn"><a class="" href="#">RYUMEN GAIHIKI</a></li>
+                                    <li class="tab-btn"><a class="" href="#">TAREKABE</a></li>
+                                    <li class="tab-btn"><a class="" href="#">BALCONY</a></li>
+                                    <li class="tab-btn"><a class="" href="#">PARAPET</a></li>
+                                    <li class="tab-btn"><a class="" href="#">SHUTTER</a></li>
+                                    <li class="tab-btn"><a class="" href="#">NOKITEN NO SHUTSU</a></li>
+								</ul>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
@@ -80,7 +92,7 @@
 											<b> ALL COMPUTATIOIN</b>
 											<hr class="style-two">
 											<p>Web-Based Application</p>
-											<small>For all computations in Shukobuild PH<small> 
+											<small>Lyndon computations in Shukobuild PH - Planner<small> 
 										</h1>
 									</div>
 								</div>
@@ -94,215 +106,1174 @@
 					
 					
 					
-					<!-- MAGE -->
+					<!-- TSUMAKABE -->
 					<div class="row tab">			
 							<div class="col-md-12">
 								<div class="panel">
 									<div class="panel-heading">
-										<h1 class="panel-title" style="font-size:60px;">404 Not Found</h1>
+										<h1 class="panel-title" style="font-size:30px;">Tsumakabe</h1>
 										<i class="panel-subtitle">Click arrow to hide body.</i>
 										<div class="right">
 											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
 										</div>
 									</div>
 									<div class="panel-body">
-												<h4>Hey, Boss! Looks like you're heading to a wrong planet!</h4>
-												<h5>Please Contact Web Developer!</h5>
-									</div>
-									<div class="panel-footer">
-										<a class="btn btn-primary">Error!</a>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-balance-scale"></i> Module</span>
+													<select id="module" class="form-control" placeholder="Module">
+														<option>910</option>
+														<option>900</option>
+														<option>1000</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-line-chart"></i> Roof Slope</span>
+													<input id="roofSlope" class="form-control" placeholder="Roof Slope" type="text">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">TRIANGULAR TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular1" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular2" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular3" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular4" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular5" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular5" class="result">0</div>
+												</div>
 											
+												<button onclick="clearTriangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">RECTANGULAR TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular1" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular2" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular3" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular4" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular5" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular5" class="result">0</div>
+												</div>
+											
+												<button onclick="clearRectangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">KETA AGE TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart1" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart1" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart2" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart2" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart3" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart3" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart4" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart4" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart5" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart5" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge5" class="result">0</div>
+												</div>
+												
+											
+												<button onclick="clearKetaAge()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							
+							<script>
+							// Helper to get global values
+							function getModule() {
+								return parseFloat(document.getElementById("module").value) || 0;
+							}
+
+							function getSlope() {
+								return parseFloat(document.getElementById("roofSlope").value) || 0;
+							}
+
+							// ROUNDUP(value, -1) logic
+							function roundupNeg1(value) {
+								return Math.ceil(value / 10) * 10;
+							}
+
+							// 1. Triangular Calculation
+							// Formula example: (input * module * slope / 20 * 650 / 1000)
+							function updateRowTriangular(el) {
+								const id = el.id.replace('inputTriangular', '');
+								const val = parseFloat(el.value) || 0;
+								const result = roundupNeg1(val * getModule() * getSlope() / 20 * 650 / 1000);
+								document.getElementById('resultTriangular' + id).textContent = result;
+							}
+
+							// 2. Rectangular Calculation
+							// Formula: ROUNDUP(input * module * slope / 10 * 650 / 1000, -1)
+							function updateRowRectangular(el) {
+								const id = el.id.replace('inputRectangular', '');
+								const val = parseFloat(el.value) || 0;
+								const result = roundupNeg1(val * getModule() * getSlope() / 10 * 650 / 1000);
+								document.getElementById('resultRectangular' + id).textContent = result;
+							}
+
+							// 3. Keta Age Calculation
+							// Assuming it sums Upper + Lower then applies a similar load factor
+							function updateKetaAge(rowNum) {
+								const resultDiv = document.getElementById('resultKetaAge' + rowNum);
+								
+								// Get live values from inputs and constants
+								const module = parseFloat(document.getElementById("module").value) || 0;
+								const roofSlope = parseFloat(document.getElementById("roofSlope").value) || 0;
+								const upperPart = parseFloat(document.getElementById('upperPart' + rowNum).value) || 0;
+								const lowerPart = parseFloat(document.getElementById('lowerPart' + rowNum).value) || 0;
+
+								if (upperPart > 0 || lowerPart > 0) {
+									// Inner Logic: ROUNDUP(part * module * slope / 10, 0)
+									let upperCalc = Math.ceil(upperPart * module * roofSlope / 10);
+									let lowerCalc = Math.ceil(lowerPart * module * roofSlope / 10);
+
+									// Outer Logic: ROUNDUP(((Upper + Lower) / 2) * 650 / 1000, -1)
+									let finalCalc = ((upperCalc + lowerCalc) / 2) * 650 / 1000;
+									let roundedResult = Math.ceil(finalCalc / 10) * 10;
+
+									resultDiv.textContent = roundedResult;
+								} else {
+									resultDiv.textContent = "0";
+								}
+							}
+
+							// Add event listeners to trigger calculation on both inputs
+							for (let i = 1; i <= 5; i++) {
+								document.getElementById('upperPart' + i).addEventListener('input', () => updateKetaAge(i));
+								document.getElementById('lowerPart' + i).addEventListener('input', () => updateKetaAge(i));
+							}
+
+							// Clear Functions
+							function clearTriangular() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('inputTriangular' + i).value = "";
+									document.getElementById('resultTriangular' + i).textContent = "0";
+								}
+							}
+
+							function clearRectangular() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('inputRectangular' + i).value = "";
+									document.getElementById('resultRectangular' + i).textContent = "0";
+								}
+							}
+
+							function clearKetaAge() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('upperPart' + i).value = "";
+									document.getElementById('lowerPart' + i).value = "";
+									document.getElementById('resultKetaAge' + i).textContent = "0";
+								}
+							}
+							</script>
+
 					</div>
-					<!-- END MAGE -->
+					<!-- END TSUMAKABE -->
 					
 					
 					
-					<!-- TAIFUHARI -->
-					<div class="row tab">
-														
+					<!-- FLOOR AREA -->
+					<div class="row tab">			
 							<div class="col-md-12">
 								<div class="panel">
 									<div class="panel-heading">
-										<h1 class="panel-title" style="font-size:60px;">404 Not Found</h1>
+										<h1 class="panel-title" style="font-size:30px;">FLOOR AREA</h1>
 										<i class="panel-subtitle">Click arrow to hide body.</i>
 										<div class="right">
 											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
 										</div>
 									</div>
 									<div class="panel-body">
-												<h4>Hey, Boss! Looks like you're heading to a wrong planet!</h4>
-												<h5>Please Contact Web Developer!</h5>
-									</div>
-									<div class="panel-footer">
-										<a class="btn btn-primary">Error!</a>
+										<div class="row">
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-balance-scale"></i> Module</span>
+													<select id="floormodule" class="form-control" placeholder="Module">
+														<option VALUE="910">910</option>
+														<option VALUE="900">900</option>
+														<option VALUE="1000">1000</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">				
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">1F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength1" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth1" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength2" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth2" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength3" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth3" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength4" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth4" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength5" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth5" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear1F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
 											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">2F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength1" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth1" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength2" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth2" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength3" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth3" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength4" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth4" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength5" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth5" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear2F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">3F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength1" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth1" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength2" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth2" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength3" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth3" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength4" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth4" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength5" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth5" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear3F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">Total Product</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">1F Floor Area</span>
+													<div id="1ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">2F Floor Area</span>
+													<div id="2ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">3F Floor Area</span>
+													<div id="3ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#b3ffb3">Total floor area (延床面積)</span>
+													<div id="totalfloorproduct" class="result" style="background:#ffff99;width:46%" >0.0000</div>
+												</div>
+												
+											</div>
+										</div>
 									</div>
 								</div>
 							</div>
+							
+						<script>
+						// Helper to get module value
+						function getModule() {
+							return parseFloat(document.getElementById("floormodule").value) || 0;
+						}
+
+						// ===== GENERIC CALCULATION FUNCTION (4 Decimals, No Rounding) =====
+						function updateRow(prefix, index) {
+							const module = getModule();
+
+							let length = parseFloat(document.getElementById(prefix + "length" + index).value) || 0;
+							let width  = parseFloat(document.getElementById(prefix + "width" + index).value) || 0;
+
+							// Direct calculation with 4 decimal places
+							let result = (length * module / 1000) * (width * module / 1000);
+
+							document.getElementById(prefix + "product" + index).innerText = result.toFixed(4);
+
+							updateTotals();
+						}
+
+						// ===== FLOOR EVENT HANDLERS =====
+						function updateRow1F(el) {
+							let index = el.id.replace("1fwidth", "").replace("1flength", "");
+							updateRow("1f", index);
+						}
+
+						function updateRow2F(el) {
+							let index = el.id.replace("2fwidth", "").replace("2flength", "");
+							updateRow("2f", index);
+						}
+
+						function updateRow3F(el) {
+							let index = el.id.replace("3fwidth", "").replace("3flength", "");
+							updateRow("3f", index);
+						}
+
+						// ===== TOTAL COMPUTATION =====
+						function getFloorTotal(prefix) {
+							let total = 0;
+							for (let i = 1; i <= 5; i++) {
+								let val = parseFloat(document.getElementById(prefix + "product" + i).innerText) || 0;
+								total += val;
+							}
+							document.getElementById(prefix + "totalproduct").innerText = total.toFixed(4);
+							return total;
+						}
+						
+
+						function updateTotals() {
+							let total1F = getFloorTotal("1f");
+							let total2F = getFloorTotal("2f");
+							let total3F = getFloorTotal("3f");
+
+							let grandTotal = total1F + total2F + total3F;
+							document.getElementById("totalfloorproduct").innerText = grandTotal.toFixed(4);
+						}
+
+						// ===== UTILITY: COPY TO CLIPBOARD =====
+						function copyText(id) {
+							const text = document.getElementById(id).innerText;
+							navigator.clipboard.writeText(text).then(() => {
+								// Optional: you can change the button icon or color briefly here for feedback
+								console.log("Copied: " + text);
+							});
+						}
+
+						// ===== CLEAR FUNCTIONS =====
+						function clearFloor(prefix) {
+							for (let i = 1; i <= 5; i++) {
+								document.getElementById(prefix + "length" + i).value = "";
+								document.getElementById(prefix + "width" + i).value = "";
+								document.getElementById(prefix + "product" + i).innerText = "0.0000";
+							}
+							updateTotals();
+						}
+
+						function clear1F() { clearFloor("1f"); }
+						function clear2F() { clearFloor("2f"); }
+						function clear3F() { clearFloor("3f"); }
+
+						</script>
+
 					</div>
-					<!-- END TAIFUHARI -->
+					<!-- END FLOOR AREA -->				
 					
 					
 					
-					<!-- TSUMAKABE LOAD -->
-					<div class="row tab">
-						<div class="panel">
-						<div class="panel-body">
-						<div class="col-md-6" style="background-color:#FFF4A3;">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-balance-scale"></i> Module</span>
-								<select class="form-control" placeholder="Module">
-									<option>910</option>
-									<option>1000</option>
-								</select>
+					<!-- DEAD LOAD -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">DEAD LOAD</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">				
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Roof</th>
+															<th>屋根 (Yane)</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Galva</td>
+															<td id="load1">ガルバリウム鋼板 : 葺き材(下地＋垂木含む) 200 + 母屋 50 + 小屋組 150 = 400</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load1')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Rooga</td>
+															<td id="load2">Rooga鉄平 : 葺き材 葺き材(下地＋垂木含む) 400 + 母屋 50 + 小屋組 150 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load2')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Air roof</td>
+															<td id="load3" >エアルーフ : 葺き材(下地＋垂木含む) 500 + 母屋 50 + 小屋組 150 = 700</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load3')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Kawara</td>
+															<td id="load4">瓦 : 葺き材(下地＋垂木含む) 650 + 母屋 50 + 小屋組 150 = 850</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load4')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Color vest</td>
+															<td id="load5">カラーベスト : 葺き材(下地＋垂木含む) 350 + 母屋 50 + 小屋組 150 = 550</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load5')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Ceiling</th>
+															<th>天井 Tenjo</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>PB</td>
+															<td id="load6">せっこうﾎﾞｰﾄﾞ : せっこうボード + LGS野縁 + ビニールクロス = 150</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load6')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>PB 15mm  (JUNTAIKA)</td>
+															<td id="load7">せっこうﾎﾞｰﾄﾞ : せっこうボード + LGS野縁 + ビニールクロス = 200</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load7')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Internal wall</th>
+															<th>内壁 Naiheki</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Normal</td>
+															<td id="load12">内部仕上両面(PB+クロス含) : 200 + 軸組150 = 350</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load12')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Juntaika</td>
+															<td id="load13">内部仕上両面(PB+クロス含) : 300 + 軸組150 = 450</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="row">	
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:18px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>External wall</th>
+															<th>外壁 Gaiheki</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Siding wall (normal)</td>
+															<td id="load8">外壁仕上(サイディング等) : 350 + 軸組 150 + 内部仕上(PB＋クロス含) 100 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load8')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Siding wall (Juntaika)</td>
+															<td id="load9">外壁仕上(サイディング等) : 350 + 軸組 150 + 内部仕上(PB＋クロス含) 150 = 650</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load9')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+														<tr>
+															<td>Galva wall( normal)</td>
+															<td id="load10">外壁仕上(ガルバリウム鋼板) : 250 + 軸組 150 + 内部仕上(PB＋クロス含) 100 = 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load10')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Galva wall(juntaika)</td>
+															<td id="load11">外壁仕上(ガルバリウム鋼板) : 250 + 軸組 150 + 内部仕上(PB＋クロス含) 150 = 550</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load11')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>overhang balcony made of aluminium(1F)</th>
+															<th></th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load22">ｵｰﾊﾞｰﾊﾝｸﾞﾊﾞﾙｺﾆｰ(ﾋﾞｭｰｽﾃｰｼﾞ) : 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load22')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Metal bal (with & w/o plywood)</td>
+															<td id="load23" title="For suihei-komen computation, Hiuchi value + Plywood value.">金属防水バルコニー  Kinzoku bosui balcony</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load23')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Metal bal (with & w/o plywood)</td>
+															<td id="load24" title="For suihei-komen computation, Hiuchi value only. We cannot add the roof value." >金属防水 350 +  床組 250 + 天井 200 = 800</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load24')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+										</div>
+										<div class="row">	
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Flooring(2F or 3F)</th>
+															<th>床 Yuka</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Flooring</td>
+															<td id="load13">フローリング貼り : フローリング(合板24㎜含む) 350 + 床組 150 + 天井 150 = 650</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Japanese tatami</td>
+															<td id="load14">畳敷 : 畳 (合板24㎜含む) 450 + 床組 150 + 天井150 = 750</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load14')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Elevated tatami in 2F (like +200)</td>
+															<td id="load15">畳敷 : 畳 (合板24㎜含む) 450 +  床組 300  + 天井 150  =  900</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load15')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>shower room in 2F or 3F</td>
+															<td id="load16">ユニットシャワー : 1350 + 天井150 = 1500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load16')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Balcony</th>
+															<th>バルコニー</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load25">防水 250 + 合板 250 + 床組 250 + 天井 150 = 900</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load25')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td id="load26">ﾋﾞｭｰｽﾃｰｼﾞ : 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load26')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Doma Entrance</th>
+															<th>玄関土間</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load27">タイル 250 + モルタル 600 + 土間コン 2300 + 砕石 3000 = 6150</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load27')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											
+										</div>
+										<div class="row">		
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Flooring(1F)</th>
+															<th>床 Yuka</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Flooring</td>
+															<td id="load17">フローリング貼り : フローリング(合板24㎜含む) 350 + 床組 150 = 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Japanese tatami</td>
+															<td id="load18">畳敷 : 畳 (合板24㎜含む) 450 + 床組 150 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load18')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Panasonic Tatamigaoka in 1F</td>
+															<td id="load19">畳が丘　:  畳が丘 410 + 合板24㎜ 140 +  床組 150 = 700</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load19')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Elevated tatami in 1F (like +200)</td>
+															<td id="load20">畳敷 : 畳 (合板24㎜含む) 450 +  床組 300 = 750</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load20')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>shower room in 1F</td>
+															<td id="load21">ユニットシャワー : 1350</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load21')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
-						</div>
-						<div class="col-md-6" style="background-color:#FFF4A3;">
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-line-chart"></i> Roof Slope</span>
-								<input class="form-control" placeholder="Roof Slope" type="text">
-							</div>
-						</div>
+							<script>
+								function copyText(id) {
+									// Get the text from the span
+									const textToCopy = document.getElementById(id).innerText;
+
+									// Use the Clipboard API to copy
+									navigator.clipboard.writeText(textToCopy).then(() => {
+										// Optional: Provide a small visual confirmation
+										console.log("Copied load value: " + textToCopy);
+										
+										// Alert is optional, feel free to remove
+										//alert("Value " + textToCopy + " copied to clipboard!"); 
+									}).catch(err => {
+										console.error('Error copying text: ', err);
+									});
+								}
+							</script>
 						
-						<div class="col-md-4" style="background-color:#FFF4A3;">
-							<div class="panel-heading">
-								<h3 class="panel-title">TRIANGULAR TSUMAKABE LOAD</h3>
-								<hr class="style-two">
-							</div>
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
-									<input class="form-control" placeholder="Triangular Grids" type="text">
-								</div>
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-line-chart"></i></span>
-									<input class="form-control" placeholder="Roof Slope" type="text">
-								</div>
-								<div class="input-group">
-									<span title="Copy" class="input-group-addon btn"><i class="fa fa-clone"></i></span>
-									<div class="form-control result" title="Tsumakabe Load">240</div>
-								</div>
-							
-								<button class="form-control btn btn-primary">Clear</button><br><br>
-						</div>
-							
-							
-						<div class="col-md-4" style="background-color:#FFF4A3;">
-							<div class="panel-heading">
-								<h3 class="panel-title">RECTANGULAR/FUKIAGE LOAD</h3>
-								<hr class="style-two">
-							</div>
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
-									<input class="form-control" placeholder="Rectangular Grids" type="text">
-								</div>
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-line-chart"></i></span>
-									<input class="form-control" placeholder="Roof Slope" type="text">
-								</div>
-								<div class="input-group">
-									<span title="Copy" class="input-group-addon btn"><i class="fa fa-clone"></i></span>
-									<div class="form-control result" title="Tsumakabe Load">240</div>
-								</div>
-								<button class="form-control btn btn-primary">Clear</button><br><br>
-						</div>
-							
-						<div class="col-md-4" style="background-color:#FFF4A3;">
-							<div class="panel-heading">
-								<h3 class="panel-title">KETA AGE TSUMAKABE LOAD</h3>
-								<hr class="style-two">
-							</div>
-						
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i></span>
-									<input class="form-control" placeholder="Upper Part" type="text">
-									
-									<span class="input-group-addon"><i class="fa fa-long-arrow-down"></i></span>
-									<input class="form-control" placeholder="Lower Part" type="text">
-								</div>
-								
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-line-chart"></i></span>
-									<input class="form-control" placeholder="Roof Slope" type="text">
-								</div>
-								<div class="input-group">
-									<span title="Copy" class="input-group-addon btn"><i class="fa fa-clone"></i></span>
-									<div class="form-control result" title="Tsumakabe Load">240</div>
-								</div>
-								<button class="form-control btn btn-primary">Clear</button><br><br>
-						</div>
-						
-						
-						
-						<div class="col-md-4" style="background-color:#bbff99;margin-top:20px;">
-							<div class="panel-heading">
-								<h3 class="panel-title">PARAPET</h3>
-								<hr class="style-two">
-							</div>
-							
-							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-line-chart"></i></span>
-								<input class="form-control" placeholder="Parapet Height" type="text">
-							</div>
-							<div class="input-group">
-								<span title="Copy" class="input-group-addon btn"><i class="fa fa-clone"></i></span>
-								<div class="form-control result" title="Tsumakabe Load">240</div>
-							</div>
-							<button class="form-control btn btn-primary">Clear</button><br><br>
-						</div>
-							
-						<div class="col-md-8" style="background-color:#ffe6b3;margin-top:20px;">
-							<div class="panel-heading">
-								<h3 class="panel-title">FLOOR AREA COMPUTATION</h3>
-								<hr class="style-two">
-								
-								<ul class="list-inline">
-									<li>Lenght
-									<input class="form-control" placeholder="Length" type="text">
-									<input class="form-control" placeholder="Length" type="text">
-									<input class="form-control" placeholder="Length" type="text">
-									</li>
-									<li>Width
-									<input class="form-control" placeholder="Width" type="text">
-									<input class="form-control" placeholder="Width" type="text">
-									<input class="form-control" placeholder="Width" type="text">
-									</li>
-									<li>Product
-									<input class="form-control" placeholder="Width" type="text">
-									<input class="form-control" placeholder="Width" type="text">
-									<input class="form-control" placeholder="Width" type="text">
-									</li>
-								</ul>
-							</div>
-							<button class="form-control btn btn-primary">Clear</button><br><br>
-						</div>
-							
-						<div class="col-md-12">
-							<div class="panel-heading">
-								<h3 class="panel-title">LEGEND</h3>
-								<hr class="style-two">
-								<i class="panel-subtitle">Click arrow to hide body.</i>
-								<div class="right">
-									<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
-								</div>
-							</div>
-							
-							<div class="panel-footer">
-								<a class="btn btn-primary">Clear</a>
-									
-							</div>
-						</div>
+
 					</div>
-					<!-- TSUMAKABE LOAD -->
+					<!-- END DEAD LOAD -->			
+					
+					
+						<!-- NOTES AND LEGEND -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">NOTES AND LEGEND</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">				
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>NOTES</th>
+															<th>KANJI</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Tsumakabe</td>
+															<td id="copy1">妻壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy1')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Solar 200</td>
+															<td id="copy2">太陽光</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy2')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Balcony 950</td>
+															<td id="copy3">バルコニー手摺</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy3')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Paraphet</td>
+															<td id="copy4">パラペット壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy4')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Ryomen Gaiheki</td>
+															<td id="copy5">両面外壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy5')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Tarekabe</td>
+															<td id="copy6">垂れ壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy6')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Shatter</td>
+															<td id="copy7">ｼｬｯﾀｰ</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy7')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>partition wall 600</td>
+															<td id="copy8">界壁差分</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy8')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>tentative name</td>
+															<td id="copy9">仮称</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy9')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>koya kabe</td>
+															<td id="copy10">小屋壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy10')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>piano yuka hokyo</td>
+															<td id="copy11">ピアノ床補強</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy11')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								function copyNote(id) {
+									// Get the text from the span
+									const noteToCopy = document.getElementById(id).innerText;
+
+									// Use the Clipboard API to copy
+									navigator.clipboard.writeText(noteToCopy).then(() => {
+										// Optional: Provide a small visual confirmation
+										console.log("Copied load value: " + noteToCopy);
+										
+										// Alert is optional, feel free to remove
+										//alert("Value " + noteToCopy + " copied to clipboard!"); 
+									}).catch(err => {
+										console.error('Error copying text: ', err);
+									});
+								}
+							</script>
+						
+
+					</div>
+					<!-- END NOTES AND LEGEND -->			
 					
 					
 					
+					<!-- RYUMEN GAIHIKI -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">RYUMEN GAIHIKI</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">1F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="input1FRyumen" class="form-control" placeholder="1F" oninput="update1FRyumen(this)" type="text"><div id="result1FRyumen" class="result">0</div>
+												</div>
+											
+												<button onclick="clear1fRyumen()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">1F-2F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="1FRyumen" class="form-control" oninput="update1F2FRyumen(this)" placeholder="1F" type="text"><input id="2FRyumen" oninput="update1F2FRyumen(this)" class="form-control" placeholder="2F" type="text"><div id="result1F2FRyumen" class="result">0</div>
+												</div>
+												<button onclick="clear1F2FRyumen()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">2F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="input2FRyumen" class="form-control" placeholder="2F" oninput="update2FRyumen(this)" type="text"><div id="result2FRyumen" class="result">0</div>
+												</div>
+												<button onclick="clearRectangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							// Function for 1F
+							function update1FRyumen(el) {
+								const val = parseFloat(el.value) || 0;
+								// Formula: CEILING((val/2)*300/1000, 50)
+								let calc = (val / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result1FRyumen").innerText = result;
+							}
+
+							// Function for 1F-2F (Combined)
+							function update1F2FRyumen(el) {
+								const val1 = parseFloat(document.getElementById("1FRyumen").value) || 0;
+								const val2 = parseFloat(document.getElementById("2FRyumen").value) || 0;
+								// Formula: CEILING((1F+2F)/2*300/1000, 50)
+								let calc = ((val1 + val2) / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result1F2FRyumen").innerText = result;
+							}
+
+							// Function for 2F
+							function update2FRyumen(el) {
+								const val = parseFloat(el.value) || 0;
+								// Formula: CEILING((val/2)*300/1000, 50)
+								let calc = (val / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result2FRyumen").innerText = result;
+							}
+
+							// Clear Functions
+							function clear1fRyumen() {
+								document.getElementById("input1FRyumen").value = "";
+								document.getElementById("result1FRyumen").innerText = "0";
+							}
+
+							function clear1F2FRyumen() {
+								document.getElementById("1FRyumen").value = "";
+								document.getElementById("2FRyumen").value = "";
+								document.getElementById("result1F2FRyumen").innerText = "0";
+							}
+
+							function clearRectangular() { // 2F Clear
+								document.getElementById("input2FRyumen").value = "";
+								document.getElementById("result2FRyumen").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END RYUMEN GAIHIKI -->
+					
+					<!-- TAREKABE -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">TAREKABE</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">TAREKABE</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTarekabe" class="form-control" placeholder="Tarekabe" oninput="updateTarekabe(this)" type="text"><div id="resultTarekabe" class="result">0</div>
+												</div>
+											
+												<button onclick="clearTarekabe()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateTarekabe(el) {
+								const resultDiv = document.getElementById("resultTarekabe");
+								const val = parseFloat(el.value) || 0;
+
+								// Check if value is greater than 2400 to avoid negative results
+								if (val > 2400) {
+									// Formula: CEILING((inputTarekabe - 2400) * 850 / 1000, 50)
+									let calculation = (val - 2400) * 850 / 1000;
+									let result = Math.ceil(calculation / 50) * 50;
+									
+									resultDiv.innerText = result;
+								} else {
+									// If 2400 or less, result is 0 (or you can set to 50 if it must always round up)
+									resultDiv.innerText = "0";
+								}
+							}
+
+							function clearTarekabe() {
+								document.getElementById("inputTarekabe").value = "";
+								document.getElementById("resultTarekabe").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END TAREKABE -->
+					
+					<!-- BALCONY -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">BALCONY</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">BALCONY</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputBalcony" class="form-control" placeholder="Balcony" oninput="updateBalcony(this)" type="text"><div id="resultBalcony" class="result">0</div>
+												</div>
+											
+												<button onclick="clearBalcony()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateBalcony(el) {
+								const resultDiv = document.getElementById("resultBalcony");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: CEILING(inputBalcony * 850 / 1000, 50)
+								let calculation = (val * 850 / 1000);
+								let result = Math.ceil(calculation / 50) * 50;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearBalcony() {
+								document.getElementById("inputBalcony").value = "";
+								document.getElementById("resultBalcony").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END BALCONY -->
 					
 					
+					<!-- PARAPET -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">PARAPET</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">PARAPET</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputParapet" class="form-control" placeholder="Parapet" oninput="updateParapet(this)" type="text"><div id="resultParapet" class="result">0</div>
+												</div>
+											
+												<button onclick="clearParapet()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateParapet(el) {
+								const resultDiv = document.getElementById("resultParapet");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: CEILING(inputBalcony * 850 / 1000, 50)
+								let calculation = (val * 850 / 1000);
+								let result = Math.ceil(calculation / 50) * 50;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearBalcony() {
+								document.getElementById("inputParapet").value = "";
+								document.getElementById("resultParapet").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END PARAPET -->
 					
-					
+					<!-- SHUTTER -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">SHUTTER</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">SHUTTER</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputShutter" class="form-control" placeholder="Shutter" oninput="updateShutter(this)" type="text"><div id="resultShutter" class="result">0</div>
+												</div>
+											
+												<button onclick="clearShutter()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateShutter(el) {
+								const resultDiv = document.getElementById("resultShutter");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: ROUNDUP(inputShutter * 455, -2)
+								// Note: -2 means rounding up to the nearest 100
+								let calculation = val * 455;
+								let result = Math.ceil(calculation / 100) * 100;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearShutter() {
+								document.getElementById("inputShutter").value = "";
+								document.getElementById("resultShutter").innerText = "0";
+							}
+
+							</script>
+					</div>
+					<!-- END SHUTTER -->
 					
 					
 					<!-- The Modal -->
