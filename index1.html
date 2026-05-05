@@ -1,0 +1,2725 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>SHUKOBUILD | ALL COMPUTATION</title>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- VENDOR CSS 
+	<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+	-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+	<!-- MAIN CSS 
+	<link rel="stylesheet" href="assets/css/main.css">-->
+	<!-- GOOGLE FONTS -->
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+	<!-- Javascript -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+	
+	<style>
+	html {
+	zoom: 80%;
+	zoom: inherit;
+	zoom: initial;
+	zoom: revert;
+	zoom: revert-layer;
+	zoom: unset;
+ }
+ 
+ 
+
+body {
+	zoom: 80%;
+	background: linear-gradient(to bottom, #ffffff 0%, #ccffff 100%)fixed;
+	font-family: "Source Sans Pro", sans-serif; 
+	position:relative;
+	font-size: 15px;
+	color: #676a6d; 
+}
+  
+
+a {
+  color: #3287B2; }
+  a:hover, a:focus {
+    color: #3b98c8;
+    text-decoration: none; }
+
+th {
+  font-weight: 600; }
+
+.page-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  font-weight: 300; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  padding-top: 15px;
+  padding-bottom: 10px; }
+
+.copyright {
+  margin-bottom: 0;
+  text-align: right;
+  font-size: 13px; }
+  @media screen and (max-width: 767px) {
+    .copyright {
+      text-align: center;
+      position: relative !important; } }
+
+/********************
+ * LAYOUT
+ ********************/
+ 
+#wrapper .sidebar {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: 260px;
+  height: 100%;
+  float: left;
+  padding-bottom:80px;
+  background-color: #2B333E;
+  position: fixed;
+  left: 0; }
+
+#wrapper .main {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  width: calc(100% - 210px);
+  height: 900px;
+  left: 0;
+  position: relative;
+  float: right;
+  background: linear-gradient(to bottom, #ffffff 0%, #ccffff 100%)fixed; }
+  
+ 
+
+#wrapper #sidebar-nav,
+#wrapper .main {
+  padding-top: 80px; }
+
+@media screen and (max-width: 767px) {
+  #wrapper #sidebar-nav,
+  #wrapper .main {
+    padding-top: 130px; } }
+
+.layout-fullwidth #wrapper .sidebar {
+  left: -260px; }
+
+.layout-fullwidth #wrapper .main {
+  width: 100%; }
+
+.layout-fullwidth #wrapper .navbar {
+  left: 0 !important; }
+
+.layout-fullwidth #wrapper .btn-toggle-fullwidth {
+  color: #00AAFF; }
+
+.offcanvas-active #wrapper .sidebar {
+  left: 0; }
+
+.offcanvas-active #wrapper .main {
+  width: 100%;
+  position: relative;
+  left: 260px; }
+
+@media screen and (max-width: 1024px) {
+  #wrapper .sidebar {
+    left: -260px; }
+  #wrapper .main {
+    width: 100%; }
+  #wrapper .navbar {
+    left: 0 !important; }
+  #wrapper .btn-toggle-fullwidth {
+    color: #00AAFF; }
+  .btn-toggle-minified {
+    display: none; } }
+
+.main-content {
+  padding: 28px 10px;
+  height:100%;
+  }
+
+.navbar + .main-content {
+  padding: 105px 0 28px 5px; }
+  @media screen and (max-width: 767px) {
+    .navbar + .main-content {
+      padding-top: 155px; } }
+
+html.fullscreen-bg,
+html.fullscreen-bg body,
+html.fullscreen-bg #wrapper {
+  height: 100%; }
+
+.vertical-align-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: table; }
+
+.vertical-align-middle {
+  display: table-cell;
+  vertical-align: middle; }
+
+/********************
+ * TOP NAVIGATION
+ ********************/
+.navbar-default {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: linear-gradient(to left, #336600 0%, #ccffcc 100%); }
+  
+  .navbar-bottom {
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  -moz-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: linear-gradient(to left, #336600 0%, #ccffcc 100%); }
+  
+  .title-logo{
+	  color:green;
+	  font-size:30px
+  }
+  
+  .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+	color:blue;
+    background-color: transparent; }
+  .navbar-default .navbar-toggle, .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: #f8f8f8; }
+  .navbar-default .brand {
+    float: left;
+    padding: 20px 35px;
+     }
+  @media screen and (max-width: 1024px) {
+    .navbar-default .brand {
+      padding-left: 30px;
+      padding-right: 15px; } }
+  @media screen and (max-width: 992px) {
+    .navbar-default .brand {
+      display: none; } }
+  @media screen and (max-width: 640px) {
+    .navbar-default #navbar-menu {
+      float: right; } }
+
+.navbar-btn {
+  float: left;
+  padding: 16px 0; }
+  .navbar-btn button {
+    font-size: 24px;
+    padding: 4px 8px;
+    line-height: .7;
+    border: none;
+    background: none;
+    outline: none; }
+  @media screen and (max-width: 640px) {
+    .navbar-btn {
+      padding-left: 0; } }
+
+.navbar-btn-right {
+  float: right; }
+
+.navbar-form {
+  padding: 15px;
+  border: 0; }
+  .navbar-form input[type="text"] {
+    min-width: 200px; }
+  @media screen and (max-width: 767px) {
+    .navbar-form {
+      float: left;
+      width: 70%;
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-left: 0;
+      padding-right: 0; }
+      .navbar-form .input-group {
+        width: 70%; }
+      .navbar-form input[type="text"] {
+        min-width: 150px; } }
+  @media screen and (max-width: 640px) {
+    .navbar-form {
+      display: none; } }
+
+.navbar-nav .icon-menu {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  position: relative; }
+  .navbar-nav .icon-menu .badge {
+    position: absolute;
+    top: 22px;
+    right: 16px; }
+
+.navbar-nav > li > a {
+  padding: 28px 20px; }
+  .navbar-nav > li > a > i {
+    font-size: 22px;
+    margin-right: 2px;
+    vertical-align: middle; }
+    .navbar-nav > li > a > i.icon-submenu {
+      margin-left: 2px;
+      margin-right: 0;
+      font-size: 10px;
+      position: relative;
+      top: 2px; }
+  .navbar-nav > li > a > span {
+    position: relative;
+    top: 2px; }
+  .navbar-nav > li > a img {
+    width: 22px;
+    margin-right: 2px; }
+
+.navbar-nav > li > .dropdown-menu {
+  padding: 0;
+  min-width: 200px; }
+
+.navbar-nav .dropdown-menu {
+  border-top: 2px solid #ACB0B5; 
+  }
+
+.navbar-nav .dropdown-menu > li > a {
+  padding: 10px 20px; }
+  .navbar-nav .dropdown-menu > li > a:hover, .navbar-nav .dropdown-menu > li > a:focus {
+    background-color: #fafafa; }
+  .navbar-nav .dropdown-menu > li > a span,
+  .navbar-nav .dropdown-menu > li > a i {
+    vertical-align: middle; }
+
+@media screen and (min-width: 768px) {
+  .navbar-nav.navbar-right {
+    margin-right: 0; } }
+
+@media screen and (max-width: 767px) {
+  .navbar-nav {
+    width: 100%;
+    margin: 0; }
+    .navbar-nav > li {
+      display: table-cell;
+      width: 1%;
+      position: inherit;
+      text-align: center; }
+    .navbar-nav > li > a {
+      padding: 15px 20px; }
+      .navbar-nav > li > a span:not(.badge),
+      .navbar-nav > li > a .icon-submenu {
+        display: none; }
+    .navbar-nav .open .dropdown-menu {
+      -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      position: absolute;
+      width: 100%;
+      margin-top: 3px;
+      background-color: #fff; }
+    .navbar-nav .open .dropdown-menu > li > a {
+      padding: 10px 15px; }
+    .navbar-nav .icon-menu {
+      padding-top: 15px;
+      padding-bottom: 15px; }
+      .navbar-nav .icon-menu .badge {
+        top: 10px;
+        right: 15px; } }
+
+.navbar-toggle {
+  padding: 5px 8px;
+  margin: 20px 15px 20px 0; }
+  .navbar-toggle .icon-nav {
+    font-size: 24px; }
+
+.notification-item .dot {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 10px;
+  height: 10px;
+  content: '';
+  margin-right: 8px; }
+
+ul.notifications > li {
+  border-bottom: 1px solid #F0F0F0; }
+  ul.notifications > li:last-child {
+    border-bottom: none; }
+  ul.notifications > li > .more {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 600; }
+    ul.notifications > li > .more:hover, ul.notifications > li > .more:focus {
+      text-decoration: none; }
+
+.dropdown-menu {
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border-color: #eaeaea; }
+  .dropdown-menu > li > a {
+    color: #676a6d; }
+  .dropdown-menu > li i {
+    margin-right: 6px; }
+  .dropdown-menu .active > a, .dropdown-menu .active > a:focus, .dropdown-menu .active > a:hover {
+    background-color: #00AAFF; }
+  .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:focus, .dropdown-menu > .disabled > a:hover {
+    color: #a3a3a3; }
+
+/********************
+ * SIDEBAR NAVIGATION
+ ********************/
+.sidebar {
+  z-index: 9; }
+  .sidebar .nav > li > a {
+    padding: 18px 30px;
+    color: #AEB7C2;
+    border-left: 5px solid transparent; }
+    .sidebar .nav > li > a:hover, .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
+      color: #fff;
+      background-color: transparent; }
+      .sidebar .nav > li > a:hover i, .sidebar .nav > li > a:focus i, .sidebar .nav > li > a.active i {
+        color: #00AAFF; }
+    .sidebar .nav > li > a:focus, .sidebar .nav > li > a.active {
+      background-color: #252c35;
+      border-left-color: #00AAFF; }
+    .sidebar .nav > li > a[data-toggle="collapse"] .icon-submenu {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      -webkit-transition: all 0.2s ease-out;
+      -moz-transition: all 0.2s ease-out;
+      -ms-transition: all 0.2s ease-out;
+      -o-transition: all 0.2s ease-out;
+      transition: all 0.2s ease-out;
+      float: right;
+      position: relative;
+      top: 5px;
+      font-size: 12px;
+      line-height: 1.1;
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      -webkit-transform: rotate(-90deg);
+      transform: rotate(-90deg); }
+    .sidebar .nav > li > a[data-toggle="collapse"].collapsed .icon-submenu {
+      -moz-transform: rotate(0deg);
+      -ms-transform: rotate(0deg);
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg); }
+    .sidebar .nav > li > a .badge {
+      font-weight: 400;
+      background-color: #F9354C; }
+  .sidebar .nav {
+    /* submenu */ }
+    .sidebar .nav i {
+      margin-right: 10px;
+      font-size: 18px; }
+    .sidebar .nav span {
+      -webkit-transition: all 0.3s ease-in-out;
+      -moz-transition: all 0.3s ease-in-out;
+      -ms-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      position: relative;
+      top: -2px; }
+    .sidebar .nav .nav {
+      background-color: #252c35; }
+      .sidebar .nav .nav > li > a {
+        padding-left: 60px;
+        padding-top: 10px;
+        padding-bottom: 10px; }
+        .sidebar .nav .nav > li > a:focus, .sidebar .nav .nav > li > a.active {
+          background-color: transparent;
+          border-left-color: transparent; }
+        .sidebar .nav .nav > li > a.active a {
+          color: #fff; }
+
+
+/********************
+ * INPUTS
+ ********************/
+.form-control {
+  -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  border-color: #eaeaea;
+  background-color: #fcfcfc; }
+  
+ .input-group input{
+	 font-size:24px;
+	 background:#ffffe6;
+ }
+  .input-group select{
+	 font-size:24px;
+	 padding:0px;
+	 background:#ffffe6;
+ }
+  
+  .form-control:focus {
+    -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+    border-color: #d6d6d6;
+    background-color: #fff; }
+
+.input-group {
+	margin:5px;
+  -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.1); }
+
+.input-group .form-control, .input-group-addon, .input-group-btn {
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.input-group-addon {
+  min-width:60px;
+  border: 1px solid #eaeaea; }
+ 
+ .result {
+  width:150px;
+  border:1px solid #ccc;
+  padding:0px;
+  background:#f5f5f5;
+  text-align:center;
+  font-size:22px;
+  font-weight:bold;
+ }
+
+/********************
+ * BUTTONS
+ ********************/
+.btn {
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 1px 2px 0 rgba(0, 0, 0, 0.2);
+  padding: 6px 22px; }
+
+.btn-group-lg > .btn,
+.btn-lg {
+  padding: 10px 28px; }
+
+.btn-group-sm > .btn,
+.btn-sm {
+  padding: 5px 18px; }
+
+.btn-group-xs > .btn,
+.btn-xs {
+  padding: 5px 14px; }
+
+.btn-primary {
+  background-color: #00AAFF;
+  border-color: #00a0f0; }
+  .btn-primary:hover, .btn-primary:focus {
+    background-color: #00a0f0;
+    border-color: #00a0f0; }
+
+.btn-warning {
+  background-color: #e4cb10;
+  border-color: #d6be0f; }
+  .btn-warning:hover, .btn-warning:focus {
+    background-color: #d6be0f;
+    border-color: #d6be0f; }
+
+.btn-default:hover, .btn-default:focus {
+  background-color: #f7f7f7; }
+
+.btn-success {
+  background-color: #41B314;
+  border-color: #3ca512; }
+  .btn-success:hover, .btn-success:focus {
+    background-color: #3ca512;
+    border-color: #3ca512; }
+
+.btn.disabled,
+.btn[disabled],
+fieldset[disabled] .btn {
+  opacity: 0.4;
+  filter: alpha(opacity=40); }
+
+/********************
+ * PANELS
+ ********************/
+.panel {
+	overflow:auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  margin-bottom: 30px; }
+  
+  .panel-1{
+	overflow:auto;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  -webkit-box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  background-color: #fff;
+  margin-bottom: 30px; }
+  
+  
+  .panel .panel-heading,
+  .panel .panel-body,
+  .panel .panel-footer {
+    padding-left: 25px;
+    padding-right: 25px; }
+  .panel .panel-heading {
+    padding-top: 5px;
+    padding-bottom: 1px;
+    position: relative; }
+    .panel .panel-heading .panel-title {
+      padding-top: 5px;
+      font-size: 18px;
+      font-weight: bold; }
+    .panel .panel-heading button {
+      padding: 0;
+      margin-left: 5px;
+      background-color: transparent;
+      border: none;
+      outline: none; }
+      .panel .panel-heading button i {
+        font-size: 14px; }
+  .panel .panel-body {
+    padding-top: 10px;
+    padding-bottom: 15px; }
+  .panel .panel-note {
+    font-size: 13px;
+    line-height: 2.6;
+    color: #777777; }
+    .panel .panel-note i {
+      font-size: 16px;
+      margin-right: 3px; }
+  .panel .right {
+    position: absolute;
+    right: 20px;
+    top: 32%; }
+  .panel.panel-headline .panel-heading {
+    border-bottom: none; }
+    .panel.panel-headline .panel-heading .panel-title {
+      margin-bottom: 1px;
+      font-size: 22px;
+      font-weight: normal; }
+    .panel.panel-headline .panel-heading .panel-subtitle {
+      margin-bottom: 0;
+      font-size: 14px;
+      color: #8D99A8; }
+  .panel.panel-scrolling .btn-bottom {
+    margin-bottom: 30px; }
+  .panel .table > thead > tr > td:first-child,
+  .panel .table > thead > tr > th:first-child,
+  .panel .table > tbody > tr > td:first-child,
+  .panel .table > tbody > tr > th:first-child,
+  .panel .table > tfoot > tr > td:first-child,
+  .panel .table > tfoot > tr > th:first-child {
+    padding-left: 25px; }
+  .panel .table > thead > tr > td:last-child,
+  .panel .table > thead > tr > th:last-child,
+  .panel .table > tbody > tr > td:last-child,
+  .panel .table > tbody > tr > th:last-child,
+  .panel .table > tfoot > tr > td:last-child,
+  .panel .table > tfoot > tr > th:last-child {
+    padding-left: 25px; }
+
+.panel-footer {
+  background-color: #fafafa; }
+
+/* tabs */
+.custom-tabs-line ul {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline; }
+  .custom-tabs-line ul > li {
+    float: left; }
+    .custom-tabs-line ul > li a {
+      color: #8d9093;
+      font-weight: normal; }
+      .custom-tabs-line ul > li a:hover, .custom-tabs-line ul > li a:focus {
+        color: #676a6d;
+        background-color: transparent; }
+      .custom-tabs-line ul > li a:focus {
+        outline: none; }
+  .custom-tabs-line ul.nav-pills a:hover, .custom-tabs-line ul.nav-pills a:focus {
+    color: #fff;
+    background-color: #00AAFF; }
+
+.custom-tabs-line.tabs-line-bottom {
+  border-bottom: 1px solid #eaeaea; }
+  .custom-tabs-line.tabs-line-bottom ul > li {
+    margin-bottom: -1px; }
+  .custom-tabs-line.tabs-line-bottom a {
+    border-bottom: 1px solid transparent; }
+  .custom-tabs-line.tabs-line-bottom .active a {
+    border-bottom: 2px solid #00AAFF; }
+
+.custom-tabs-line.left-aligned {
+  text-align: left; }
+
+.custom-tabs-line.right-aligned {
+  text-align: right; }
+
+@media screen and (max-width: 768px) {
+  .custom-tabs-line ul li.active > a {
+    margin-bottom: -1px; } }
+
+.tab-pane {
+  padding: 25px 15px; }
+
+/********************************
+ * AUTHENTICATION FORMS, PAGE
+ ********************************/
+.auth-box {
+	-moz-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.6);
+	-webkit-box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.6);
+	box-shadow: 1px 2px 10px 0 rgba(0, 0, 0, 0.6);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	width: 90%;
+	height: 95%;
+	margin: 0 auto;
+	
+  }
+
+  .auth-box:before {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    content: ' ';
+    vertical-align: middle;
+    height: 100%; }
+  .auth-box .content {
+    display: inline-block;
+    vertical-align: middle;
+    *vertical-align: auto;
+    *zoom: 1;
+    *display: inline;
+    width: 99%;
+    vertical-align: middle; }
+	
+  .auth-box .left {
+    float: left;
+    width: 42%;
+    height: 100%;
+    padding: 0 0px;
+    text-align: center; }
+    .auth-box .left:before {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      content: ' ';
+      vertical-align: middle;
+      height: 100%; }
+  .auth-box .right {
+    float: right;
+    width: 58%;
+    height: 100%;
+    position: relative;
+    background: linear-gradient(to bottom, #ccffcc 0%, #3399ff 100%); }
+    .auth-box .right:before {
+      display: inline-block;
+      vertical-align: middle;
+      *vertical-align: auto;
+      *zoom: 1;
+      *display: inline;
+      content: ' ';
+      vertical-align: middle;
+      height: 100%; }
+    .auth-box .right .text {
+      position: relative;
+      padding: 0 30px;
+      color: #fff; }
+    .auth-box .right .heading {
+      margin-top: 0;
+      margin-bottom: 5px;
+      font-size: 26px;
+      font-weight: 300; }
+    .auth-box .right p {
+      margin: 0;
+      font-size: 18px;
+      font-weight: 300; }
+    .auth-box .right .overlay {
+      position: absolute;
+      top: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: rgba(99, 156, 185, 0.92); }
+  .auth-box .header {
+    margin-bottom: 30px; }
+  .auth-box .lead {
+    margin-top: 5px;
+    font-size: 18px;
+    text-align: center; }
+  .auth-box .form-auth-small .btn {
+    margin-top: 20px; }
+  .auth-box .form-auth-small .element-left {
+    float: left; }
+  .auth-box .form-auth-small .element-right {
+    float: right; }
+  .auth-box .form-auth-small .bottom {
+    margin-top: 20px;
+    text-align: center; }
+  .auth-box.lockscreen {
+    width: 50%;
+    padding: 40px 60px; }
+    .auth-box.lockscreen .logo {
+      margin-bottom: 30px; }
+    .auth-box.lockscreen .user {
+      margin-bottom: 30px; }
+      .auth-box.lockscreen .user .name {
+        font-size: 18px;
+        margin-top: 10px; }
+  @media screen and (min-width: 1440px) {
+    .auth-box.lockscreen {
+      width: 35%; } }
+  @media screen and (max-width: 1279px) {
+    .auth-box {
+		 height: 100%;
+      width: 90%; }
+      .auth-box .left {
+        top: 3.3em; } }
+  @media screen and (max-width: 1023px) {
+    .auth-box .left {
+      width: 100%;
+      height: 100%;
+      position: inherit;
+      padding: 30px; }
+	  .auth-box .content b{
+	  font-size:40px;
+		}
+    .auth-box .right {
+      display: none; } }
+  @media screen and (max-width: 992px) {
+    .auth-box {
+		 height: 100%;
+      width: 70%; }
+	  .auth-box .content b{
+	  font-size:30px;
+		}
+      .auth-box.lockscreen {
+        width: 50%;
+        padding: 40px 20px; } }
+  @media screen and (max-width: 640px) {
+    .auth-box {
+		 height: 100%;
+		width: 90%; 
+		}
+      .auth-box .content {
+        width: 95%; }
+		.auth-box .content b{
+	  font-size:30px;
+		}
+      .auth-box.lockscreen {
+        width: 90%; } }
+
+
+
+/* ===== Tab content ===== */
+.tab-content {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	width: 100%;
+}
+
+.tab {
+	
+	position: absolute;
+	top: 105px;
+	right: 40px;
+	padding-right:1px;
+	bottom: 0;
+	left: auto;
+	width: 95%;
+	opacity: 0;
+	height:650px;
+	transform: translateX(25px);
+	content-visibility: hidden;
+	overflow:auto;
+	
+}
+
+.tab.active {
+	transform: translateX(0);
+	content-visibility: visible;
+	opacity: 9;
+	transition: opacity 1s ease, transform 1s ease;
+	z-index:1;
+}
+
+.blink {
+	animation: blinker 1.0s linear infinite;
+	color: red;
+	background:yellow;
+}
+
+@keyframes blinker {
+	50% {
+		opacity: 0;
+	}
+}
+
+
+
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal1 {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content1 {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 90px;
+  right: 180px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+  .modal-content1 {
+    width: 100%;
+  }
+}
+
+
+.ellipsis {
+    position: relative;
+}
+.ellipsis:before {
+    content: '&nbsp;';
+    visibility: hidden;
+}
+.ellipsis span {
+    position: absolute;
+    left: 0;
+    right: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+
+
+
+.text {
+  position: relative;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.text p {
+  font-size:50px;
+  font-family:Arial;
+  color:#000033;
+
+}
+
+.text b {
+	position:relative;
+  font-size:110px;
+   letter-spacing: 5px;
+  color:black;
+  font-family:arial narrow;
+  
+}
+.text small {
+  color:black;
+  font-size:20px;
+  font-weight:bold;
+}
+
+.wavy {
+  animation-name: wavy;
+  animation-duration: 1.3s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes wavy {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -15px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+
+	
+	
+	hr.style-two {
+    border: 0;
+    height: 1px;
+	margin-bottom:3px;
+	margin-top:3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+
+	</style>
+</head>
+
+<body>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<!-- NAVBAR -->
+		<nav class="navbar navbar-default navbar-fixed-top">
+			<div class="brand">
+				<a href="index.html" class="title-logo" ><b>SHUKOBUILD PH</b></a>
+			</div>
+			<div class="container-fluid">
+				<div class="navbar-btn">
+					<button type="button" class="btn-toggle-fullwidth"><i class="lnr lnr-arrow-left-circle"></i></button>
+				</div>
+				<form class="navbar-form navbar-left">
+					<div class="input-group">
+						<input type="text" value=""id="mySearch" onkeyup="myFunction()" class="form-control" placeholder="Search dashboard...">
+					
+					</div>
+				</form>
+				
+				
+			</div>
+		</nav>
+		<!-- END NAVBAR -->
+		<!-- LEFT SIDEPANEL -->
+		<div id="sidebar-nav" class="sidebar">
+			<div class="sidebar-scroll">
+				<nav>
+					<ul class="nav">
+						<li class="tab-btn active"><a href="#" class=""><i class="lnr lnr-home"></i> <span>Home</span></a></li>
+						<li>
+							<a href="#Tsumakabe" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>TSUMAKABE LOAD</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="Tsumakabe" class="collapse ">
+								<ul class="nav">
+									<li class="tab-btn"><a class="" href="#">TSUMAKABE</a></li>
+                                    <li class="tab-btn"><a class="" href="#">FLOOR AREA</a></li>
+								</ul>
+							</div>
+						</li>
+						<li class="tab-btn"><a href="#" class=""><i class="fa fa-columns"></i> <span>DEAD LOAD</span></a></li>
+						<li class="tab-btn"><a href="#" class=""><i class="fa fa-chevron-circle-up"></i> <span>NOTES AND LEGEND</span></a></li>
+						<li>
+							<a href="#Lineload" data-toggle="collapse" class="collapsed"><i class="lnr lnr-file-empty"></i> <span>LINE LOAD</span> <i class="icon-submenu lnr lnr-chevron-left"></i></a>
+							<div id="Lineload" class="collapse ">
+								<ul class="nav">
+									<li class="tab-btn"><a class="" href="#">RYUMEN GAIHIKI</a></li>
+                                    <li class="tab-btn"><a class="" href="#">TAREKABE</a></li>
+                                    <li class="tab-btn"><a class="" href="#">BALCONY</a></li>
+                                    <li class="tab-btn"><a class="" href="#">PARAPET</a></li>
+                                    <li class="tab-btn"><a class="" href="#">SHUTTER</a></li>
+                                    <li class="tab-btn"><a class="" href="#">NOKITEN NO SHUTSU</a></li>
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+		<!-- END LEFT SIDEPANEL -->
+		<!-- MAIN -->
+		<div class="main">
+			<!-- MAIN CONTENT -->
+			<div class="main-content">
+				<div class="container-fluid">
+					
+					
+					<div class="row tab active">
+						<div class="auth-box ">
+								<div class="content">
+									<div class="text">
+										<h1 class="header" ><p>SHUKOBUILD PH</p>
+											<b> ALL COMPUTATIOIN</b>
+											<hr class="style-two">
+											<p>Web-Based Application</p>
+											<small>Lyndon computations in Shukobuild PH - Planner<small> 
+										</h1>
+									</div>
+								</div>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+					
+					
+					
+					
+					
+					
+					
+					<!-- TSUMAKABE -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">Tsumakabe</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-balance-scale"></i> Module</span>
+													<select id="module" class="form-control" placeholder="Module">
+														<option>910</option>
+														<option>900</option>
+														<option>1000</option>
+													</select>
+												</div>
+											</div>
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-line-chart"></i> Roof Slope</span>
+													<input id="roofSlope" class="form-control" placeholder="Roof Slope" type="text">
+												</div>
+											</div>
+										</div>
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">TRIANGULAR TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular1" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular2" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular3" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular4" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTriangular5" class="form-control" placeholder="Triangular Grids" oninput="updateRowTriangular(this)" type="text"><div id="resultTriangular5" class="result">0</div>
+												</div>
+											
+												<button onclick="clearTriangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">RECTANGULAR TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular1" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular2" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular3" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular4" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="inputRectangular5" class="form-control" placeholder="Rectangular Grids" oninput="updateRowRectangular(this)" type="text"><div id="resultRectangular5" class="result">0</div>
+												</div>
+											
+												<button onclick="clearRectangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">KETA AGE TSUMAKABE LOAD</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart1" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart1" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge1" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart2" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart2" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge2" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart3" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart3" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge3" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart4" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart4" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge4" class="result">0</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="upperPart5" class="form-control" placeholder="Upper Part" type="text"><input id="lowerPart5" class="form-control" placeholder="Lower Part" type="text"><div id="resultKetaAge5" class="result">0</div>
+												</div>
+												
+											
+												<button onclick="clearKetaAge()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+							<script>
+							// Helper to get global values
+							function getModule() {
+								return parseFloat(document.getElementById("module").value) || 0;
+							}
+
+							function getSlope() {
+								return parseFloat(document.getElementById("roofSlope").value) || 0;
+							}
+
+							// ROUNDUP(value, -1) logic
+							function roundupNeg1(value) {
+								return Math.ceil(value / 10) * 10;
+							}
+
+							// 1. Triangular Calculation
+							// Formula example: (input * module * slope / 20 * 650 / 1000)
+							function updateRowTriangular(el) {
+								const id = el.id.replace('inputTriangular', '');
+								const val = parseFloat(el.value) || 0;
+								const result = roundupNeg1(val * getModule() * getSlope() / 20 * 650 / 1000);
+								document.getElementById('resultTriangular' + id).textContent = result;
+							}
+
+							// 2. Rectangular Calculation
+							// Formula: ROUNDUP(input * module * slope / 10 * 650 / 1000, -1)
+							function updateRowRectangular(el) {
+								const id = el.id.replace('inputRectangular', '');
+								const val = parseFloat(el.value) || 0;
+								const result = roundupNeg1(val * getModule() * getSlope() / 10 * 650 / 1000);
+								document.getElementById('resultRectangular' + id).textContent = result;
+							}
+
+							// 3. Keta Age Calculation
+							// Assuming it sums Upper + Lower then applies a similar load factor
+							function updateKetaAge(rowNum) {
+								const resultDiv = document.getElementById('resultKetaAge' + rowNum);
+								
+								// Get live values from inputs and constants
+								const module = parseFloat(document.getElementById("module").value) || 0;
+								const roofSlope = parseFloat(document.getElementById("roofSlope").value) || 0;
+								const upperPart = parseFloat(document.getElementById('upperPart' + rowNum).value) || 0;
+								const lowerPart = parseFloat(document.getElementById('lowerPart' + rowNum).value) || 0;
+
+								if (upperPart > 0 || lowerPart > 0) {
+									// Inner Logic: ROUNDUP(part * module * slope / 10, 0)
+									let upperCalc = Math.ceil(upperPart * module * roofSlope / 10);
+									let lowerCalc = Math.ceil(lowerPart * module * roofSlope / 10);
+
+									// Outer Logic: ROUNDUP(((Upper + Lower) / 2) * 650 / 1000, -1)
+									let finalCalc = ((upperCalc + lowerCalc) / 2) * 650 / 1000;
+									let roundedResult = Math.ceil(finalCalc / 10) * 10;
+
+									resultDiv.textContent = roundedResult;
+								} else {
+									resultDiv.textContent = "0";
+								}
+							}
+
+							// Add event listeners to trigger calculation on both inputs
+							for (let i = 1; i <= 5; i++) {
+								document.getElementById('upperPart' + i).addEventListener('input', () => updateKetaAge(i));
+								document.getElementById('lowerPart' + i).addEventListener('input', () => updateKetaAge(i));
+							}
+
+							// Clear Functions
+							function clearTriangular() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('inputTriangular' + i).value = "";
+									document.getElementById('resultTriangular' + i).textContent = "0";
+								}
+							}
+
+							function clearRectangular() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('inputRectangular' + i).value = "";
+									document.getElementById('resultRectangular' + i).textContent = "0";
+								}
+							}
+
+							function clearKetaAge() {
+								for (let i = 1; i <= 5; i++) {
+									document.getElementById('upperPart' + i).value = "";
+									document.getElementById('lowerPart' + i).value = "";
+									document.getElementById('resultKetaAge' + i).textContent = "0";
+								}
+							}
+							</script>
+
+					</div>
+					<!-- END TSUMAKABE -->
+					
+					
+					
+					<!-- FLOOR AREA -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">FLOOR AREA</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-3">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-balance-scale"></i> Module</span>
+													<select id="floormodule" class="form-control" placeholder="Module">
+														<option VALUE="910">910</option>
+														<option VALUE="900">900</option>
+														<option VALUE="1000">1000</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class="row">				
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">1F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength1" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth1" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength2" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth2" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength3" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth3" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength4" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth4" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="1flength5" class="form-control" placeholder="Lenght" type="text"><input id="1fwidth5" oninput="updateRow1F(this)" class="form-control" placeholder="Width" type="text"><div id="1fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear1F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">2F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength1" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth1" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength2" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth2" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength3" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth3" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength4" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth4" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="2flength5" class="form-control" placeholder="Lenght" type="text"><input id="2fwidth5" oninput="updateRow2F(this)" class="form-control" placeholder="Width" type="text"><div id="2fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear2F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">3F FLOOR AREA</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength1" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth1" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct1" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength2" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth2" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct2" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength3" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth3" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct3" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength4" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth4" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct4" class="result">0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-arrows-h"></i></span>
+													<input id="3flength5" class="form-control" placeholder="Lenght" type="text"><input id="3fwidth5" oninput="updateRow3F(this)" class="form-control" placeholder="Width" type="text"><div id="3fproduct5" class="result">0.0000</div>
+												</div>
+												<button onclick="clear3F()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">Total Product</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">1F Floor Area</span>
+													<div id="1ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">2F Floor Area</span>
+													<div id="2ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#e6e6e6">3F Floor Area</span>
+													<div id="3ftotalproduct" class="result" style="background:#ffff99;width:60%" >0.0000</div>
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span  style="font-size:16px;padding:5px;background:#b3ffb3">Total floor area (延床面積)</span>
+													<div id="totalfloorproduct" class="result" style="background:#ffff99;width:46%" >0.0000</div>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							
+						<script>
+						// Helper to get module value
+						function getModule() {
+							return parseFloat(document.getElementById("floormodule").value) || 0;
+						}
+
+						// ===== GENERIC CALCULATION FUNCTION (4 Decimals, No Rounding) =====
+						function updateRow(prefix, index) {
+							const module = getModule();
+
+							let length = parseFloat(document.getElementById(prefix + "length" + index).value) || 0;
+							let width  = parseFloat(document.getElementById(prefix + "width" + index).value) || 0;
+
+							// Direct calculation with 4 decimal places
+							let result = (length * module / 1000) * (width * module / 1000);
+
+							document.getElementById(prefix + "product" + index).innerText = result.toFixed(4);
+
+							updateTotals();
+						}
+
+						// ===== FLOOR EVENT HANDLERS =====
+						function updateRow1F(el) {
+							let index = el.id.replace("1fwidth", "").replace("1flength", "");
+							updateRow("1f", index);
+						}
+
+						function updateRow2F(el) {
+							let index = el.id.replace("2fwidth", "").replace("2flength", "");
+							updateRow("2f", index);
+						}
+
+						function updateRow3F(el) {
+							let index = el.id.replace("3fwidth", "").replace("3flength", "");
+							updateRow("3f", index);
+						}
+
+						// ===== TOTAL COMPUTATION =====
+						function getFloorTotal(prefix) {
+							let total = 0;
+							for (let i = 1; i <= 5; i++) {
+								let val = parseFloat(document.getElementById(prefix + "product" + i).innerText) || 0;
+								total += val;
+							}
+							document.getElementById(prefix + "totalproduct").innerText = total.toFixed(4);
+							return total;
+						}
+						
+
+						function updateTotals() {
+							let total1F = getFloorTotal("1f");
+							let total2F = getFloorTotal("2f");
+							let total3F = getFloorTotal("3f");
+
+							let grandTotal = total1F + total2F + total3F;
+							document.getElementById("totalfloorproduct").innerText = grandTotal.toFixed(4);
+						}
+
+						// ===== UTILITY: COPY TO CLIPBOARD =====
+						function copyText(id) {
+							const text = document.getElementById(id).innerText;
+							navigator.clipboard.writeText(text).then(() => {
+								// Optional: you can change the button icon or color briefly here for feedback
+								console.log("Copied: " + text);
+							});
+						}
+
+						// ===== CLEAR FUNCTIONS =====
+						function clearFloor(prefix) {
+							for (let i = 1; i <= 5; i++) {
+								document.getElementById(prefix + "length" + i).value = "";
+								document.getElementById(prefix + "width" + i).value = "";
+								document.getElementById(prefix + "product" + i).innerText = "0.0000";
+							}
+							updateTotals();
+						}
+
+						function clear1F() { clearFloor("1f"); }
+						function clear2F() { clearFloor("2f"); }
+						function clear3F() { clearFloor("3f"); }
+
+						</script>
+
+					</div>
+					<!-- END FLOOR AREA -->				
+					
+					
+					
+					<!-- DEAD LOAD -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">DEAD LOAD</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">				
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Roof</th>
+															<th>屋根 (Yane)</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Galva</td>
+															<td id="load1">ガルバリウム鋼板 : 葺き材(下地＋垂木含む) 200 + 母屋 50 + 小屋組 150 = 400</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load1')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Rooga</td>
+															<td id="load2">Rooga鉄平 : 葺き材 葺き材(下地＋垂木含む) 400 + 母屋 50 + 小屋組 150 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load2')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Air roof</td>
+															<td id="load3" >エアルーフ : 葺き材(下地＋垂木含む) 500 + 母屋 50 + 小屋組 150 = 700</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load3')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Kawara</td>
+															<td id="load4">瓦 : 葺き材(下地＋垂木含む) 650 + 母屋 50 + 小屋組 150 = 850</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load4')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Color vest</td>
+															<td id="load5">カラーベスト : 葺き材(下地＋垂木含む) 350 + 母屋 50 + 小屋組 150 = 550</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load5')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Ceiling</th>
+															<th>天井 Tenjo</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>PB</td>
+															<td id="load6">せっこうﾎﾞｰﾄﾞ : せっこうボード + LGS野縁 + ビニールクロス = 150</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load6')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>PB 15mm  (JUNTAIKA)</td>
+															<td id="load7">せっこうﾎﾞｰﾄﾞ : せっこうボード + LGS野縁 + ビニールクロス = 200</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load7')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Internal wall</th>
+															<th>内壁 Naiheki</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Normal</td>
+															<td id="load12">内部仕上両面(PB+クロス含) : 200 + 軸組150 = 350</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load12')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Juntaika</td>
+															<td id="load13">内部仕上両面(PB+クロス含) : 300 + 軸組150 = 450</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+										</div>
+										<div class="row">	
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:18px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>External wall</th>
+															<th>外壁 Gaiheki</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Siding wall (normal)</td>
+															<td id="load8">外壁仕上(サイディング等) : 350 + 軸組 150 + 内部仕上(PB＋クロス含) 100 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load8')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Siding wall (Juntaika)</td>
+															<td id="load9">外壁仕上(サイディング等) : 350 + 軸組 150 + 内部仕上(PB＋クロス含) 150 = 650</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load9')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+														<tr>
+															<td>Galva wall( normal)</td>
+															<td id="load10">外壁仕上(ガルバリウム鋼板) : 250 + 軸組 150 + 内部仕上(PB＋クロス含) 100 = 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load10')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Galva wall(juntaika)</td>
+															<td id="load11">外壁仕上(ガルバリウム鋼板) : 250 + 軸組 150 + 内部仕上(PB＋クロス含) 150 = 550</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load11')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>overhang balcony made of aluminium(1F)</th>
+															<th></th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load22">ｵｰﾊﾞｰﾊﾝｸﾞﾊﾞﾙｺﾆｰ(ﾋﾞｭｰｽﾃｰｼﾞ) : 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load22')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Metal bal (with & w/o plywood)</td>
+															<td id="load23" title="For suihei-komen computation, Hiuchi value + Plywood value.">金属防水バルコニー  Kinzoku bosui balcony</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load23')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Metal bal (with & w/o plywood)</td>
+															<td id="load24" title="For suihei-komen computation, Hiuchi value only. We cannot add the roof value." >金属防水 350 +  床組 250 + 天井 200 = 800</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load24')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											
+										</div>
+										<div class="row">	
+											
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Flooring(2F or 3F)</th>
+															<th>床 Yuka</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Flooring</td>
+															<td id="load13">フローリング貼り : フローリング(合板24㎜含む) 350 + 床組 150 + 天井 150 = 650</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Japanese tatami</td>
+															<td id="load14">畳敷 : 畳 (合板24㎜含む) 450 + 床組 150 + 天井150 = 750</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load14')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Elevated tatami in 2F (like +200)</td>
+															<td id="load15">畳敷 : 畳 (合板24㎜含む) 450 +  床組 300  + 天井 150  =  900</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load15')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>shower room in 2F or 3F</td>
+															<td id="load16">ユニットシャワー : 1350 + 天井150 = 1500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load16')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Balcony</th>
+															<th>バルコニー</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load25">防水 250 + 合板 250 + 床組 250 + 天井 150 = 900</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load25')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td></td>
+															<td id="load26">ﾋﾞｭｰｽﾃｰｼﾞ : 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load26')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Doma Entrance</th>
+															<th>玄関土間</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td></td>
+															<td id="load27">タイル 250 + モルタル 600 + 土間コン 2300 + 砕石 3000 = 6150</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load27')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+											
+										</div>
+										<div class="row">		
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>Flooring(1F)</th>
+															<th>床 Yuka</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Flooring</td>
+															<td id="load17">フローリング貼り : フローリング(合板24㎜含む) 350 + 床組 150 = 500</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load13')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Japanese tatami</td>
+															<td id="load18">畳敷 : 畳 (合板24㎜含む) 450 + 床組 150 = 600</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load18')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Panasonic Tatamigaoka in 1F</td>
+															<td id="load19">畳が丘　:  畳が丘 410 + 合板24㎜ 140 +  床組 150 = 700</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load19')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Elevated tatami in 1F (like +200)</td>
+															<td id="load20">畳敷 : 畳 (合板24㎜含む) 450 +  床組 300 = 750</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load20')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>shower room in 1F</td>
+															<td id="load21">ユニットシャワー : 1350</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyText('load21')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								function copyText(id) {
+									// Get the text from the span
+									const textToCopy = document.getElementById(id).innerText;
+
+									// Use the Clipboard API to copy
+									navigator.clipboard.writeText(textToCopy).then(() => {
+										// Optional: Provide a small visual confirmation
+										console.log("Copied load value: " + textToCopy);
+										
+										// Alert is optional, feel free to remove
+										//alert("Value " + textToCopy + " copied to clipboard!"); 
+									}).catch(err => {
+										console.error('Error copying text: ', err);
+									});
+								}
+							</script>
+						
+
+					</div>
+					<!-- END DEAD LOAD -->			
+					
+					
+						<!-- NOTES AND LEGEND -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">NOTES AND LEGEND</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">				
+											<div class="col-md-6">
+												<table class="table table-bordered table-striped" style="font-size:20px;">
+													<thead>
+														<tr style="background-color: #fcf8e3;">
+															<th>NOTES</th>
+															<th>KANJI</th>
+															<th>Copy</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>Tsumakabe</td>
+															<td id="copy1">妻壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy1')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Solar 200</td>
+															<td id="copy2">太陽光</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy2')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Balcony 950</td>
+															<td id="copy3">バルコニー手摺</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy3')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Paraphet</td>
+															<td id="copy4">パラペット壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy4')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Ryomen Gaiheki</td>
+															<td id="copy5">両面外壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy5')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Tarekabe</td>
+															<td id="copy6">垂れ壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy6')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>Shatter</td>
+															<td id="copy7">ｼｬｯﾀｰ</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy7')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>partition wall 600</td>
+															<td id="copy8">界壁差分</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy8')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>tentative name</td>
+															<td id="copy9">仮称</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy9')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>koya kabe</td>
+															<td id="copy10">小屋壁</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy10')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+														<tr>
+															<td>piano yuka hokyo</td>
+															<td id="copy11">ピアノ床補強</td>
+															<td><button class="btn btn-default btn-sm" onclick="copyNote('copy11')"><i class="fa fa-copy"></i></button></td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+								function copyNote(id) {
+									// Get the text from the span
+									const noteToCopy = document.getElementById(id).innerText;
+
+									// Use the Clipboard API to copy
+									navigator.clipboard.writeText(noteToCopy).then(() => {
+										// Optional: Provide a small visual confirmation
+										console.log("Copied load value: " + noteToCopy);
+										
+										// Alert is optional, feel free to remove
+										//alert("Value " + noteToCopy + " copied to clipboard!"); 
+									}).catch(err => {
+										console.error('Error copying text: ', err);
+									});
+								}
+							</script>
+						
+
+					</div>
+					<!-- END NOTES AND LEGEND -->			
+					
+					
+					
+					<!-- RYUMEN GAIHIKI -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">RYUMEN GAIHIKI</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">1F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="input1FRyumen" class="form-control" placeholder="1F" oninput="update1FRyumen(this)" type="text"><div id="result1FRyumen" class="result">0</div>
+												</div>
+											
+												<button onclick="clear1fRyumen()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											<div class="col-md-4">
+												<div class="panel-heading">	<h3 class="panel-title">1F-2F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-long-arrow-up"></i><i class="fa fa-long-arrow-down"></i></span>
+													<input id="1FRyumen" class="form-control" oninput="update1F2FRyumen(this)" placeholder="1F" type="text"><input id="2FRyumen" oninput="update1F2FRyumen(this)" class="form-control" placeholder="2F" type="text"><div id="result1F2FRyumen" class="result">0</div>
+												</div>
+												<button onclick="clear1F2FRyumen()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">2F</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-h"></i></span>
+													<input id="input2FRyumen" class="form-control" placeholder="2F" oninput="update2FRyumen(this)" type="text"><div id="result2FRyumen" class="result">0</div>
+												</div>
+												<button onclick="clearRectangular()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							// Function for 1F
+							function update1FRyumen(el) {
+								const val = parseFloat(el.value) || 0;
+								// Formula: CEILING((val/2)*300/1000, 50)
+								let calc = (val / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result1FRyumen").innerText = result;
+							}
+
+							// Function for 1F-2F (Combined)
+							function update1F2FRyumen(el) {
+								const val1 = parseFloat(document.getElementById("1FRyumen").value) || 0;
+								const val2 = parseFloat(document.getElementById("2FRyumen").value) || 0;
+								// Formula: CEILING((1F+2F)/2*300/1000, 50)
+								let calc = ((val1 + val2) / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result1F2FRyumen").innerText = result;
+							}
+
+							// Function for 2F
+							function update2FRyumen(el) {
+								const val = parseFloat(el.value) || 0;
+								// Formula: CEILING((val/2)*300/1000, 50)
+								let calc = (val / 2) * 300 / 1000;
+								let result = Math.ceil(calc / 50) * 50;
+								document.getElementById("result2FRyumen").innerText = result;
+							}
+
+							// Clear Functions
+							function clear1fRyumen() {
+								document.getElementById("input1FRyumen").value = "";
+								document.getElementById("result1FRyumen").innerText = "0";
+							}
+
+							function clear1F2FRyumen() {
+								document.getElementById("1FRyumen").value = "";
+								document.getElementById("2FRyumen").value = "";
+								document.getElementById("result1F2FRyumen").innerText = "0";
+							}
+
+							function clearRectangular() { // 2F Clear
+								document.getElementById("input2FRyumen").value = "";
+								document.getElementById("result2FRyumen").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END RYUMEN GAIHIKI -->
+					
+					<!-- TAREKABE -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">TAREKABE</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">TAREKABE</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputTarekabe" class="form-control" placeholder="Tarekabe" oninput="updateTarekabe(this)" type="text"><div id="resultTarekabe" class="result">0</div>
+												</div>
+											
+												<button onclick="clearTarekabe()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateTarekabe(el) {
+								const resultDiv = document.getElementById("resultTarekabe");
+								const val = parseFloat(el.value) || 0;
+
+								// Check if value is greater than 2400 to avoid negative results
+								if (val > 2400) {
+									// Formula: CEILING((inputTarekabe - 2400) * 850 / 1000, 50)
+									let calculation = (val - 2400) * 850 / 1000;
+									let result = Math.ceil(calculation / 50) * 50;
+									
+									resultDiv.innerText = result;
+								} else {
+									// If 2400 or less, result is 0 (or you can set to 50 if it must always round up)
+									resultDiv.innerText = "0";
+								}
+							}
+
+							function clearTarekabe() {
+								document.getElementById("inputTarekabe").value = "";
+								document.getElementById("resultTarekabe").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END TAREKABE -->
+					
+					<!-- BALCONY -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">BALCONY</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">BALCONY</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputBalcony" class="form-control" placeholder="Balcony" oninput="updateBalcony(this)" type="text"><div id="resultBalcony" class="result">0</div>
+												</div>
+											
+												<button onclick="clearBalcony()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateBalcony(el) {
+								const resultDiv = document.getElementById("resultBalcony");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: CEILING(inputBalcony * 850 / 1000, 50)
+								let calculation = (val * 850 / 1000);
+								let result = Math.ceil(calculation / 50) * 50;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearBalcony() {
+								document.getElementById("inputBalcony").value = "";
+								document.getElementById("resultBalcony").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END BALCONY -->
+					
+					
+					<!-- PARAPET -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">PARAPET</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">PARAPET</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputParapet" class="form-control" placeholder="Parapet" oninput="updateParapet(this)" type="text"><div id="resultParapet" class="result">0</div>
+												</div>
+											
+												<button onclick="clearParapet()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateParapet(el) {
+								const resultDiv = document.getElementById("resultParapet");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: CEILING(inputBalcony * 850 / 1000, 50)
+								let calculation = (val * 850 / 1000);
+								let result = Math.ceil(calculation / 50) * 50;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearBalcony() {
+								document.getElementById("inputParapet").value = "";
+								document.getElementById("resultParapet").innerText = "0";
+							}
+							</script>
+					</div>
+					<!-- END PARAPET -->
+					
+					<!-- SHUTTER -->
+					<div class="row tab">			
+							<div class="col-md-12">
+								<div class="panel">
+									<div class="panel-heading">
+										<h1 class="panel-title" style="font-size:30px;">SHUTTER</h1>
+										<i class="panel-subtitle">Click arrow to hide body.</i>
+										<div class="right">
+											<button type="button" class="btn-toggle-collapse"><i class="lnr lnr-chevron-up"></i></button>
+										</div>
+									</div>
+									<div class="panel-body">
+										<div class="row">
+											<div class="col-md-4">
+												<div class="panel-heading">
+													<h3 class="panel-title">SHUTTER</h3>
+													<hr class="style-two">
+												</div>
+												<div class="input-group" style="display:flex;">
+													<span class="input-group-addon"><i class="fa fa-arrows-v"></i></span>
+													<input id="inputShutter" class="form-control" placeholder="Shutter" oninput="updateShutter(this)" type="text"><div id="resultShutter" class="result">0</div>
+												</div>
+											
+												<button onclick="clearShutter()" class="form-control btn btn-primary"><i class="fa fa-trash-o"></i> Clear</button>
+											</div>
+											
+										</div>
+									</div>
+								</div>
+							</div>
+							<script>
+							function updateShutter(el) {
+								const resultDiv = document.getElementById("resultShutter");
+								const val = parseFloat(el.value) || 0;
+
+								// Formula: ROUNDUP(inputShutter * 455, -2)
+								// Note: -2 means rounding up to the nearest 100
+								let calculation = val * 455;
+								let result = Math.ceil(calculation / 100) * 100;
+
+								resultDiv.innerText = result;
+							}
+
+							function clearShutter() {
+								document.getElementById("inputShutter").value = "";
+								document.getElementById("resultShutter").innerText = "0";
+							}
+
+							</script>
+					</div>
+					<!-- END SHUTTER -->
+					
+					
+					<!-- The Modal -->
+					<div id="myModal" class="modal">
+					  <span class="close">&times;</span>
+					  <img class="modal-content" id="img01">
+					  <div id="caption"></div>
+					</div>
+					
+					
+					<script>
+						// Get the modal
+						var modal = document.getElementById("myModal");
+
+						// Get the image and insert it inside the modal - use its "alt" text as a caption
+						var myModalImg = document.getElementById("img01");
+						var myModalcaptionText = document.getElementById("caption");
+						myModalTriggerElement = document.getElementsByClassName("ModalTriggerImage");
+
+						
+
+						for (var i = 0; i < myModalTriggerElement.length; i++)
+						{
+							myModalTriggerElement[i].onclick = function() {
+								myModalImg.src = this.src;
+								myModalcaptionText.innerHTML = this.alt;
+								modal.style.display = "block";
+							}
+						}
+
+						// Get the <span> element that closes the modal
+						var span = document.getElementsByClassName("close")[0];
+
+						// When the user clicks on <span> (x), close the modal
+						span.onclick = function() { 
+						  modal.style.display = "none";
+						}
+						
+						// When the user clicks anywhere outside of the modal, close it
+						window.onclick = function(event) {
+							if (event.target == modal) {
+								modal.style.display = "none";
+							}
+						}
+						
+						</script>
+					
+					
+				</div>
+			</div>
+			<nav class="navbar navbar-bottom navbar-fixed-bottom">
+				<div class="container-fluid">
+					<small class="pull-right" style="padding:20px 15px 15px 15px;font-weight:bold;font-size:12px;color:black"> Lyndon Enero - All Rights Reserved ©2026</small>
+				</div>
+			</nav>
+			<!-- END MAIN CONTENT -->
+		</div>
+		<!-- END MAIN -->
+	</div>
+	<!-- END WRAPPER -->
+	
+	<script>
+	$(document).ready(function() {
+
+	/*-----------------------------------/
+	/*	TOP NAVIGATION AND LAYOUT
+	/*----------------------------------*/
+
+	$('.btn-toggle-fullwidth').on('click', function() {
+		if(!$('body').hasClass('layout-fullwidth')) {
+			$('body').addClass('layout-fullwidth');
+
+		} else {
+			$('body').removeClass('layout-fullwidth');
+			$('body').removeClass('layout-default'); // also remove default behaviour if set
+		}
+
+		$(this).find('.lnr').toggleClass('lnr-arrow-left-circle lnr-arrow-right-circle');
+
+		if($(window).innerWidth() < 1025) {
+			if(!$('body').hasClass('offcanvas-active')) {
+				$('body').addClass('offcanvas-active');
+			} else {
+				$('body').removeClass('offcanvas-active');
+			}
+		}
+	});
+
+	$(window).on('load', function() {
+		if($(window).innerWidth() < 1025) {
+			$('.btn-toggle-fullwidth').find('.icon-arrows')
+			.removeClass('icon-arrows-move-left')
+			.addClass('icon-arrows-move-right');
+		}
+
+		// adjust right sidebar top position
+		$('.right-sidebar').css('top', $('.navbar').innerHeight());
+
+		// if page has content-menu, set top padding of main-content
+		if($('.has-content-menu').length > 0) {
+			$('.navbar + .main-content').css('padding-top', $('.navbar').innerHeight());
+		}
+
+		// for shorter main content
+		if($('.main').height() < $('#sidebar-nav').height()) {
+			$('.main').css('min-height', $('#sidebar-nav').height());
+		}
+	});
+
+
+	/*-----------------------------------/
+	/*	SIDEBAR NAVIGATION
+	/*----------------------------------*/
+
+	$('.sidebar a[data-toggle="collapse"]').on('click', function() {
+		if($(this).hasClass('collapsed')) {
+			$(this).parent().addClass('active');
+		} else {
+			$(this).removeClass('active');
+		}
+	});
+	
+	 
+	
+	$(document).ready(function(){
+        $(".collapse").on('show.bs.collapse', function(e){
+            $(".collapse[aria-expanded='true']").collapse("hide");
+        });
+		 document.body.scrollTop = 0;
+    });
+
+	if( $('.sidebar-scroll').length > 0 ) {
+		$('.sidebar-scroll').slimScroll({
+			height: '100%',
+			wheelStep: 2,
+		});
+	}
+	
+	$(function() {
+	  $('body, html').slimScroll({
+		size: '8px',
+		width: '100%',
+		height: '100%',
+		color: '#ff4800',
+		allowPageScroll: true,
+		alwaysVisible: true
+	  });
+	});
+
+
+
+	/*-----------------------------------/
+	/*	PANEL FUNCTIONS
+	/*----------------------------------*/
+
+	// panel remove
+	$('.panel .btn-remove').click(function(e){
+
+		e.preventDefault();
+		$(this).parents('.panel').fadeOut(300, function(){
+			$(this).remove();
+		});
+	});
+
+	// panel collapse/expand
+	var affectedElement = $('.panel-body');
+
+	$('.panel .btn-toggle-collapse').clickToggle(
+		function(e) {
+			e.preventDefault();
+
+			// if has scroll
+			if( $(this).parents('.panel').find('.slimScrollDiv').length > 0 ) {
+				affectedElement = $('.slimScrollDiv');
+			}
+
+			$(this).parents('.panel').find(affectedElement).slideUp(300);
+			$(this).find('i.lnr-chevron-up').toggleClass('lnr-chevron-down');
+		},
+		function(e) {
+			e.preventDefault();
+
+			// if has scroll
+			if( $(this).parents('.panel').find('.slimScrollDiv').length > 0 ) {
+				affectedElement = $('.slimScrollDiv');
+			}
+
+			$(this).parents('.panel').find(affectedElement).slideDown(300);
+			$(this).find('i.lnr-chevron-up').toggleClass('lnr-chevron-down');
+		}
+	);
+
+
+	/*-----------------------------------/
+	/*	PANEL SCROLLING
+	/*----------------------------------*/
+
+	if( $('.panel-scrolling').length > 0) {
+		$('.panel-scrolling .panel-body').slimScroll({
+			height: '430px',
+			wheelStep: 2,
+		});
+	}
+
+	if( $('#panel-scrolling-demo').length > 0) {
+		$('#panel-scrolling-demo .panel-body').slimScroll({
+			height: '175px',
+			wheelStep: 2,
+		});
+	}
+
+	/*-----------------------------------/
+	/*	TODO LIST
+	/*----------------------------------*/
+
+	$('.todo-list input').change( function() {
+		if( $(this).prop('checked') ) {
+			$(this).parents('li').addClass('completed');
+		}else {
+			$(this).parents('li').removeClass('completed');
+		}
+	});
+
+
+	/*-----------------------------------/
+	/* TOASTR NOTIFICATION
+	/*----------------------------------*/
+
+	if($('#toastr-demo').length > 0) {
+		toastr.options.timeOut = "false";
+		toastr.options.closeButton = true;
+		toastr['info']('Hi there, this is notification demo with HTML support. So, you can add HTML elements like <a href="#">this link</a>');
+
+		$('.btn-toastr').on('click', function() {
+			$context = $(this).data('context');
+			$message = $(this).data('message');
+			$position = $(this).data('position');
+
+			if($context == '') {
+				$context = 'info';
+			}
+
+			if($position == '') {
+				$positionClass = 'toast-left-top';
+			} else {
+				$positionClass = 'toast-' + $position;
+			}
+
+			toastr.remove();
+			toastr[$context]($message, '' , { positionClass: $positionClass });
+		});
+
+		$('#toastr-callback1').on('click', function() {
+			$message = $(this).data('message');
+
+			toastr.options = {
+				"timeOut": "300",
+				"onShown": function() { alert('onShown callback'); },
+				"onHidden": function() { alert('onHidden callback'); }
+			}
+
+			toastr['info']($message);
+		});
+
+		$('#toastr-callback2').on('click', function() {
+			$message = $(this).data('message');
+
+			toastr.options = {
+				"timeOut": "10000",
+				"onclick": function() { alert('onclick callback'); },
+			}
+
+			toastr['info']($message);
+
+		});
+
+		$('#toastr-callback3').on('click', function() {
+			$message = $(this).data('message');
+
+			toastr.options = {
+				"timeOut": "10000",
+				"closeButton": true,
+				"onCloseClick": function() { alert('onCloseClick callback'); }
+			}
+
+			toastr['info']($message);
+		});
+	}
+});
+
+	// toggle function
+	$.fn.clickToggle = function( f1, f2 ) {
+		return this.each( function() {
+			var clicked = false;
+			$(this).bind('click', function() {
+				if(clicked) {
+					clicked = false;
+					return f2.apply(this, arguments);
+				}
+
+				clicked = true;
+				return f1.apply(this, arguments);
+			});
+		});
+
+	}
+
+	$(document).ready(function () {
+		$("#mySearch").keyup(function () {
+			var filter = $(this).val(),
+				count = 0;
+			$("li").each(function () {
+				if (filter == "") {
+					$(this).css("visibility", "visible");
+					$(this).fadeIn();
+				} else if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+					$(this).css("visibility", "hidden");
+					$(this).fadeOut();
+				} else {
+					$(this).css("visibility", "visible");
+					$(this).fadeIn();
+				}
+			});
+		});
+	});
+
+// Javascript to view tab contents on click tab buttons
+	const tabs = document.querySelectorAll('.tab');
+	const tabBtns = document.querySelectorAll('.tab-btn');
+
+	const tab_Nav = function (tabBtnClick) {
+		tabBtns.forEach((tabBtn) => {
+			tabBtn.classList.remove('active');
+		});
+
+		tabs.forEach((tab) => {
+			tab.classList.remove('active');
+		});
+
+		tabBtns[tabBtnClick].classList.add('active');
+		tabs[tabBtnClick].classList.add('active');
+		
+		$("html, body").animate({ scrollTop: 0 }, "slow");
+	};
+
+	tabBtns.forEach((tabBtn, i) => {
+		tabBtn.addEventListener('click', () => {
+			tab_Nav(i);
+		});
+	});
+</script>
+</body>
+
+</html>
